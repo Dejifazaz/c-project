@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// Define a struct to represent a row in the CSV file
+
 struct Product {
     string Name;
     string Category;
@@ -36,17 +36,21 @@ void readFile(const string &filename, vector<Product> &products) {
     myFile.close();
 }
 
+void display(const vector<Product> &products) {
+    cout << "--------------------------------------\n";
+    cout << "       Product Details\n";
+    cout << "--------------------------------------\n";
 
-void displayProducts(const vector<Product> &products) {
-
-    for (const auto &product : products) {
-        cout << product.Name << ","
-             << product.Category << ","
-             << product.Price << ","
-             << product.Quantity << ","
-             << product.Rating << endl;
+    for (const Product &product : products) {
+        cout << "Name:       " << product.Name << "\n";
+        cout << "Category:   " << product.Category << "\n";
+        cout << "Price:      $" << product.Price << "\n";
+        cout << "Quantity:   " << product.Quantity << "\n";
+        cout << "Rating:     " << product.Rating << " / 5.0\n";
+        cout << "--------------------------------------\n";
     }
 }
+
 
 
 void question1() {
@@ -54,7 +58,7 @@ void question1() {
     string filename = "../products.csv";
 
     readFile(filename, products);
-    displayProducts(products);
+    display(products);
 }
 
 int main() {
