@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 struct Product {
     string Name;
     string Category;
@@ -13,26 +12,22 @@ struct Product {
     string Rating;
 };
 
-
 void readFile(const string &filename, vector<Product> &products) {
-    ifstream myFile("../product_sales.csv");
+    ifstream myFile(filename);
     if (!myFile.is_open()) {
         cout << "File failed to open: " << filename << endl;
         return;
     }
 
-    while (myFile.good()) {
-        Product product;
-        getline(myFile, product.Name, ',');
-        getline(myFile, product.Category, ',');
-        getline(myFile, product.Price, ',');
-        getline(myFile, product.Quantity, ',');
-        getline(myFile, product.Rating, '\n');
+    Product product;
+    while (getline(myFile, product.Name, ',') &&
+           getline(myFile, product.Category, ',') &&
+           getline(myFile, product.Price, ',') &&
+           getline(myFile, product.Quantity, ',') &&
+           getline(myFile, product.Rating, '\n')) {
+        products.push_back(product);
+           }
 
-        if (!product.Name.empty()) {
-            products.push_back(product);
-        }
-    }
     myFile.close();
 }
 
@@ -44,18 +39,16 @@ void display(const vector<Product> &products) {
     for (const Product &product : products) {
         cout << "Name:       " << product.Name << "\n";
         cout << "Category:   " << product.Category << "\n";
-        cout << "Price:      $" << product.Price << "\n";
+        cout << "Price:      €" << product.Price << "\n";
         cout << "Quantity:   " << product.Quantity << "\n";
         cout << "Rating:     " << product.Rating << " / 5.0\n";
         cout << "--------------------------------------\n";
     }
 }
 
-
-
 void question1() {
     vector<Product> products;
-    string filename = "../products.csv";
+    string filename = "../product_sales.csv"; // Make sure the file path is correct
 
     readFile(filename, products);
     display(products);
