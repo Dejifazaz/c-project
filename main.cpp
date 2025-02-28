@@ -1,74 +1,63 @@
 #include <iostream>
-#include <sstream>
 #include <fstream>
 #include <vector>
-#include <algorithm>
+
 using namespace std;
 
-void question1();
-int main() {
-    question1();
-    }
-
+// Define a struct to represent a row in the CSV file
 struct Product {
     string Name;
     string Category;
-    double Price;
-    int Quantity;
-    double Rating;
+    string Price;
+    string Quantity;
+    string Rating;
 };
-void readfile(const string & filename, vector<Product> &products) {
-    ifstream fin(filename);
-    if (fin)
-    {
+
+
+void readFile(const string &filename, vector<Product> &products) {
+    ifstream myFile("../product_sales.csv");
+    if (!myFile.is_open()) {
+        cout << "File failed to open: " << filename << endl;
+        return;
+    }
+
+    while (myFile.good()) {
         Product product;
-        while (!fin.eof) {
-            fin >> product.Name >> product.Category >> product.Price >> product.Quantity;
+        getline(myFile, product.Name, ',');
+        getline(myFile, product.Category, ',');
+        getline(myFile, product.Price, ',');
+        getline(myFile, product.Quantity, ',');
+        getline(myFile, product.Rating, '\n');
+
+        if (!product.Name.empty()) {
             products.push_back(product);
-
         }
-        fin.close();
-
-    } else{
-        cout << "Error opening file " << filename << endl;
-        system("exit");
-
     }
-}
-void display(const vector<Product> &products) {
-    vector<Product>::const_iterator iter;
-    for (iter = products.cbegin(); iter != products.cend(); ++iter) {
-        cout << "display";
-
-        if (iter != products.cbegin()) {
-            cout << "\n";
-        }
-        cout << iter->Name << ","<< iter->Category << ","<< iter->Price << ","
-            << iter->Quantity << ","<<iter->Rating << "\n";
-    }
-
+    myFile.close();
 }
 
-void print(vector<Product> &products)
-{
-    for (int i = 0; i < products.size(); i++)
-    {
-        if (i != 0) {
-            cout << ",";
-        }
-        cout << products.at(i).Name;
+
+void displayProducts(const vector<Product> &products) {
+
+    for (const auto &product : products) {
+        cout << product.Name << ","
+             << product.Category << ","
+             << product.Price << ","
+             << product.Quantity << ","
+             << product.Rating << endl;
     }
-    cout << endl;
 }
+
 
 void question1() {
-vector<Product> products;
-    string filename = "../product_sales.csv";
-    readfile(filename, products);
-    print(products);
-    cout << "completed";
-    }
+    vector<Product> products;
+    string filename = "../products.csv";
 
+    readFile(filename, products);
+    displayProducts(products);
+}
 
-
-
+int main() {
+    question1();
+    return 0;
+}
