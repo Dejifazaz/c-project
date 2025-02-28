@@ -1,25 +1,74 @@
 #include <iostream>
+#include <sstream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+using namespace std;
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+void question1();
 int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the
-    // <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
-
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code.
-        // We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/>
-        // breakpoint for you, but you can always add more by pressing
-        // <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
+    question1();
     }
 
-    return 0;
+struct Product {
+    string Name;
+    string Category;
+    double Price;
+    int Quantity;
+    double Rating;
+};
+void readfile(const string & filename, vector<Product> &products) {
+    ifstream fin(filename);
+    if (fin)
+    {
+        Product product;
+        while (!fin.eof) {
+            fin >> product.Name >> product.Category >> product.Price >> product.Quantity;
+            products.push_back(product);
+
+        }
+        fin.close();
+
+    } else{
+        cout << "Error opening file " << filename << endl;
+        system("exit");
+
+    }
+}
+void display(const vector<Product> &products) {
+    vector<Product>::const_iterator iter;
+    for (iter = products.cbegin(); iter != products.cend(); ++iter) {
+        cout << "display";
+
+        if (iter != products.cbegin()) {
+            cout << "\n";
+        }
+        cout << iter->Name << ","<< iter->Category << ","<< iter->Price << ","
+            << iter->Quantity << ","<<iter->Rating << "\n";
+    }
+
 }
 
-// TIP See CLion help at <a
-// href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
-//  Also, you can try interactive lessons for CLion by selecting
-//  'Help | Learn IDE Features' from the main menu.
+void print(vector<Product> &products)
+{
+    for (int i = 0; i < products.size(); i++)
+    {
+        if (i != 0) {
+            cout << ",";
+        }
+        cout << products.at(i).Name;
+    }
+    cout << endl;
+}
+
+void question1() {
+vector<Product> products;
+    string filename = "../product_sales.csv";
+    readfile(filename, products);
+    print(products);
+    cout << "completed";
+    }
+
+
+
+

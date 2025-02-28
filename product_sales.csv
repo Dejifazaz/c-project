@@ -1,0 +1,93 @@
+ProductName,Category,Price,QuantitySold,Rating
+Tablet,Office Equipment,572.44,27,4.8
+Mouse,Accessories,50.11,99,3.5
+Monitor,Office Equipment,170.64,85,3.9
+Mouse,Computing,1509.19,20,2.4
+Mouse,Accessories,1221.08,52,2.4
+Tablet,Accessories,1092.6,44,3.0
+Keyboard,Accessories,1464.82,35,1.5
+Camera,Gadgets,1301.65,13,3.9
+Headphones,Accessories,1912.35,84,4.9
+Laptop,Accessories,1811.04,93,4.8
+Smartphone,Computing,1358.2,67,3.7
+Printer,Office Equipment,94.12,61,4.0
+Smartwatch,Gadgets,849.3,37,3.6
+Tablet,Computing,1374.65,15,4.5
+Monitor,Accessories,1178.47,79,3.3
+Smartphone,Office Equipment,1819.22,46,2.2
+Headphones,Computing,1272.33,58,1.9
+Printer,Office Equipment,1831.07,47,4.6
+Camera,Gadgets,889.27,96,2.5
+Laptop,Computing,920.48,42,4.9
+Keyboard,Accessories,1904.68,29,4.2
+Mouse,Accessories,1331.72,73,1.7
+Smartwatch,Computing,1466.18,87,2.6
+Tablet,Computing,988.64,55,3.4
+Camera,Gadgets,889.44,64,4.7
+Laptop,Office Equipment,1433.74,26,4.5
+Headphones,Computing,1661.46,22,4.1
+Smartphone,Computing,756.49,80,3.6
+Monitor,Office Equipment,1444.55,32,3.9
+Printer,Office Equipment,1538.78,90,2.0
+Smartwatch,Gadgets,1035.9,33,4.3
+Tablet,Accessories,1501.21,98,3.2
+Mouse,Accessories,1633.78,60,3.9
+Keyboard,Computing,1843.4,62,2.8
+Smartphone,Gadgets,1208.8,16,4.4
+Headphones,Computing,1306.26,83,3.5
+Camera,Accessories,1212.77,21,2.1
+Smartwatch,Computing,1985.95,54,4.6
+Laptop,Computing,1166.41,31,3.0
+Mouse,Accessories,1357.38,19,1.9
+Tablet,Office Equipment,1559.45,81,3.1
+Monitor,Computing,1485.29,88,4.7
+Keyboard,Accessories,1727.53,65,3.3
+Smartphone,Gadgets,1716.88,92,3.9
+Laptop,Office Equipment,1050.21,28,2.5
+Printer,Office Equipment,1893.6,17,4.7
+Headphones,Gadgets,1746.74,56,4.0
+Smartwatch,Accessories,1298.22,49,3.2
+Camera,Gadgets,1261.97,24,4.6
+Mouse,Computing,1839.27,71,2.3
+Monitor,Computing,1233.49,50,4.8
+Smartphone,Accessories,888.33,30,4.9
+Laptop,Computing,1505.51,82,3.1
+Keyboard,Office Equipment,1920.33,36,4.2
+Headphones,Accessories,1654.93,97,3.7
+Tablet,Office Equipment,1210.47,70,2.8
+Camera,Gadgets,1322.12,43,4.4
+Smartwatch,Computing,1988.32,14,3.3
+Printer,Accessories,1467.22,63,2.7
+Smartphone,Computing,1124.57,41,4.8
+Mouse,Office Equipment,1731.67,39,3.5
+Monitor,Accessories,1891.26,86,2.2
+Keyboard,Computing,1427.19,57,4.3
+Laptop,Computing,1600.47,40,3.6
+Tablet,Gadgets,1055.32,23,4.1
+Headphones,Accessories,1177.61,72,3.0
+Smartwatch,Computing,1091.14,45,4.7
+Printer,Office Equipment,1605.94,34,3.8
+Camera,Accessories,1237.77,95,4.2
+Laptop,Computing,1674.83,75,3.9
+Smartphone,Accessories,1162.5,20,2.9
+Mouse,Computing,1267.46,48,4.0
+Monitor,Office Equipment,1119.49,59,2.3
+Keyboard,Gadgets,1986.29,74,4.5
+Smartwatch,Accessories,1320.72,38,3.1
+Tablet,Computing,1657.36,25,3.8
+Camera,Office Equipment,1748.54,53,4.9
+Headphones,Gadgets,1409.23,68,3.7
+Laptop,Accessories,1524.98,77,2.6
+Mouse,Computing,1382.65,66,4.3
+Smartphone,Gadgets,1870.48,76,3.0
+Keyboard,Computing,1403.19,89,4.6
+Tablet,Office Equipment,1942.37,12,2.7
+Printer,Accessories,1134.26,11,4.4
+Smartwatch,Gadgets,1931.64,78,3.2
+Camera,Computing,1246.28,10,3.5
+Laptop,Office Equipment,1103.41,51,4.8
+Monitor,Computing,1550.28,9,3.9
+Headphones,Accessories,1508.67,7,2.4
+Mouse,Gadgets,1299.72,8,4.5
+Keyboard,Office Equipment,1704.48,6,3.6
+Smartwatch,Computing,1332.18,5,4.1
